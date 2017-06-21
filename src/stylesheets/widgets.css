@@ -1,0 +1,40 @@
+.w-col {
+  margin-top: 30px;
+}
+
+.w-general {
+  background-color: white;
+}
+
+.w-orders {
+  padding-top: 15px;
+  text-align: center;
+  height: 76px;
+  background-color: #30a5ff;
+}
+
+.w-comments {
+  padding-top: 15px;
+  text-align: center;
+  height: 76px;
+  background-color: #ffb53e
+}
+
+.w-users {
+  padding-top: 15px;
+  text-align: center;
+  height: 76px;
+  background-color: #1ebfae;
+}
+
+.w-views {
+  padding-top: 15px;
+  text-align: center;
+  height: 76px;
+  background-color: #f9243f
+}
+
+.w-number {
+  height: 76px;
+  background-color: white;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Row } from 'react-bootstrap';
 
 import PropTypes from 'prop-types';
-import { widgetShape } from './shapes';
+import { widgetShape } from '../shapes';
 
 import Widget from '../../common/Widget';
 
@@ -11,25 +11,25 @@ export default function Widgets( { widgets } ) {
     <Row>
       <Widget iconSize='3x' 
               icon='shopping-bag' 
-              iconClass='Dashboard-widgets-icon-1'
+              iconClass='w-orders'
               spanText={ widgets.newOrders } 
               smallText='New orders' />
       
       <Widget iconSize='3x' 
               icon='comment-o' 
-              iconClass='Dashboard-widgets-icon-2'
+              iconClass='w-comments'
               spanText={ widgets.comments } 
               smallText='Comments' />
       
       <Widget iconSize='3x' 
               icon='user-o' 
-              iconClass='Dashboard-widgets-icon-3'
+              iconClass='w-users'
               spanText={ widgets.newUsers } 
               smallText='New users' />
       
       <Widget iconSize='3x' 
               icon='drivers-license-o' 
-              iconClass='Dashboard-widgets-icon-4'
+              iconClass='w-views'
               spanText={ widgets.newUsers } 
               smallText='Page views' />
     </Row>

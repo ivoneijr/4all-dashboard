@@ -57,7 +57,7 @@ export default function Widgets( { widgets } ) {
         
         <Col lg={3} md={3} sm={6} xs={12} >
           <div className='Dashboard-widgets'>
-            <Row>
+            <div>
               <Col md={6} className='Dashboard-widgets-icon-4'>
                 <Icon name="drivers-license-o" size='3x' inverse/>
               </Col>
@@ -67,7 +67,7 @@ export default function Widgets( { widgets } ) {
                 </h3>
                 <small>Page views</small>
               </Col>
-            </Row>
+            </div>
           </div>
         </Col>
       </Row>

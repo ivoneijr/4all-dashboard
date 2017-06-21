@@ -1,12 +1,3 @@
-.Dashboard {
-  /*text-align: center;*/
-}
-
-.Dashboard-logo {
-  /*animation: Dashboard-logo-spin infinite 20s linear;*/
-  /*height: 80px;*/
-}
-
 .Dashboard-header {
   text-align: center;
   background-color: #4fa444;
@@ -41,7 +32,7 @@
   padding-top: 15px;
   text-align: center;
   height: 76px;
-  background-color: #1ebfae
+  background-color: #1ebfae;
 }
 .Dashboard-widgets-icon-4 {
   padding-top: 15px;
@@ -51,5 +42,6 @@
 }
 
 .Dashboard-widgets-number {
+  height: 76px;
   background-color: white;
 }

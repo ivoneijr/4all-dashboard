@@ -11,6 +11,8 @@ import logo from '../../../images/logo.png';
 import '../../../stylesheets/Dashboard.css';
 
 import Widgets from './widgets/Widgets';
+import PageViews from './pageViews/PageViews';
+import Messages from './messages/Messages';
 
 class Dashboard extends Component {
   static propTypes = {
@@ -32,15 +34,16 @@ class Dashboard extends Component {
     
     return (
       <div>
-        <div className="Dashboard">
+        <div>
           <div className="Dashboard-header">
             <img src={ logo } alt='logo'/>
           </div>
 
           <div className="Dashboard-content">
-
             <h1>Dashboard</h1>
-            <Widgets widgets={ widgets  }/>
+            <Widgets widgets={ widgets }/>
+            <PageViews pageViews={ pageViews }/>
+            <Messages messages={ messages }/>
           </div>
         </div>
       </div> 

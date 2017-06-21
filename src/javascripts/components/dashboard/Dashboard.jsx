@@ -10,9 +10,9 @@ import * as actions from '../reducers/dashboard';
 import logo from '../../../images/logo.png';
 import '../../../stylesheets/Dashboard.css';
 
-import Widgets from './widgets/Widgets';
-import PageViews from './pageViews/PageViews';
-import Messages from './messages/Messages';
+import Widgets from './widgets';
+import PageViews from './pageViews';
+import Messages from './messages';
 
 class Dashboard extends Component {
   static propTypes = {
@@ -35,9 +35,9 @@ class Dashboard extends Component {
     return (
       <div>
         <div>
-          <div className="Dashboard-header">
+          {/*<div className="Dashboard-header">
             <img src={ logo } alt='logo'/>
-          </div>
+          </div>*/}
 
           <div className="Dashboard-content">
             <h1>Dashboard</h1>

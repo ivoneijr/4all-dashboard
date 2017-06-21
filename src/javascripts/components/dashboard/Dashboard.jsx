@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 
-import { Row, Col, Grid } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { Icon } from 'react-fa'
 
 import PropTypes from 'prop-types';
@@ -50,7 +50,7 @@ class Dashboard extends Component {
                     </Col>
                     <Col md={8} className='Dashboard-widgets-number'>
                       <h3>
-                        <span>{widgets.newOrders}</span>
+                        <span>{ widgets.newOrders }</span>
                       </h3>
                       <small>New Orders</small>
                     </Col>
@@ -65,7 +65,7 @@ class Dashboard extends Component {
                     </Col>
                     <Col md={8} className='Dashboard-widgets-number'>
                       <h3>
-                        <span>{widgets.comments}</span>
+                        <span>{ widgets.comments }</span>
                       </h3>
                       <small>Comments</small>
                     </Col>
@@ -80,7 +80,7 @@ class Dashboard extends Component {
                     </Col>
                     <Col md={8} className='Dashboard-widgets-number'>
                       <h3>
-                        <span>{widgets.newUsers}</span>
+                        <span>{ widgets.newUsers }</span>
                       </h3>
                       <small>New Users</small>
                     </Col>
@@ -95,7 +95,7 @@ class Dashboard extends Component {
                     </Col>
                     <Col md={8} className='Dashboard-widgets-number'>
                       <h3>
-                        <span>{widgets.newUsers}</span>
+                        <span>{ widgets.newUsers }</span>
                       </h3>
                       <small>Page views</small>
                     </Col>

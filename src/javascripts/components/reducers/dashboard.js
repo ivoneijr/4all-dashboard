@@ -71,7 +71,7 @@ export function fetchWidgets() {
   return function(dispatch) {
     dispatch(updateWidgets(LOADING_STATE));
 
-    $.ajax({ url: `${API_URL}/widgets`, contentType: 'application/json', dataType: 'json', type: 'GET', data: {} })
+    $.ajax({ url: `${API_URL}/widgets`, contentType: 'application/json', dataType: 'json', type: 'GET' })
         .then(data => dispatch(updateWidgets(data)))
         .fail(e => dispatch(setError(e)));
   };
@@ -81,7 +81,7 @@ export function fetchPageViews() {
   return function(dispatch) {
     dispatch(updatePageViews([LOADING_STATE]));
 
-    $.ajax({ url: `${API_URL}/pageViews`, contentType: 'application/json', dataType: 'json', type: 'GET', data: {} })
+    $.ajax({ url: `${API_URL}/pageViews`, contentType: 'application/json', dataType: 'json', type: 'GET' })
         .then(data => dispatch(updatePageViews(data)))
         .fail(e => dispatch(setError(e)));
   };
@@ -91,7 +91,7 @@ export function fetchMessages() {
   return function(dispatch) {
     dispatch(updateMessages([LOADING_STATE]));
 
-    $.ajax({ url: `${API_URL}/messages`, contentType: 'application/json', dataType: 'json', type: 'GET', data: {} })
+    $.ajax({ url: `${API_URL}/messages`, contentType: 'application/json', dataType: 'json', type: 'GET' })
         .then(data => dispatch(updateMessages(data)))
         .fail(e => dispatch(setError(e)));
   };

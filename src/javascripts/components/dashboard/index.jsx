@@ -8,7 +8,7 @@ import store from '../stores/redux_store';
 import * as actions from '../reducers/dashboard';
 
 import logo from '../../../images/logo.png';
-import '../../../stylesheets/Dashboard.css';
+import '../../../stylesheets/dashboard.css';
 
 import Widgets from './widgets';
 import PageViews from './pageViews';

@@ -27,5 +27,5 @@ export default function PageViews({ pageViews }) {
 }
 
 PageViews.propTypes = {
-  pageViews: PropTypes.shape(PAGE_VIEW_SHAPE)
+  pageViews: PropTypes.arrayOf(PropTypes.shape(PAGE_VIEW_SHAPE))
 };

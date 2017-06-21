@@ -2,7 +2,7 @@ import React from 'react';
 import { Row } from 'react-bootstrap';
 
 import PropTypes from 'prop-types';
-import { widgetShape } from '../shapes';
+import { WIDGET_SHAPE } from '../shapes';
 
 import Widget from '../../common/Widget';
 
@@ -37,5 +37,5 @@ export default function Widgets( { widgets } ) {
 }
 
 Widgets.propTypes = {
-  widgets: PropTypes.shape(widgetShape),
+  widgets: PropTypes.shape(WIDGET_SHAPE),
 };

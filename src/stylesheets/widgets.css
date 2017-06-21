@@ -38,3 +38,7 @@
   height: 76px;
   background-color: white;
 }
+
+.w-spanText {
+  margin-bottom: -3px;
+}

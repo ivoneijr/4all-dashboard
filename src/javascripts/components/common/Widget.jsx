@@ -15,7 +15,7 @@ export default function Widget({ icon, iconSize, iconClass, spanText, smallText 
           <Icon name={ icon } size={ iconSize } inverse/>
         </Col>
         <Col md={6} className='w-number'>
-        <h3><span> { spanText } </span></h3>
+        <h3 className='w-spanText'><span> { spanText } </span></h3>
         <small>{ smallText }</small>
         </Col>
       </div>

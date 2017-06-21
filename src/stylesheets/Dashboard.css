@@ -1,0 +1,43 @@
+.Dashboard {
+  /*text-align: center;*/
+}
+
+.Dashboard-logo {
+  /*animation: Dashboard-logo-spin infinite 20s linear;*/
+  /*height: 80px;*/
+}
+
+.Dashboard-header {
+  text-align: center;
+  background-color: #4fa444;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.Dashboard-content {
+  font-family: 'Roboto', sans-serif;
+  margin: 30px;
+  color: #5e6367;
+}
+
+.Dashboard-widgets {
+  background-color: white;
+}
+
+.Dashboard-widgets-icon-1 {
+  background-color: #30a5ff;
+}
+.Dashboard-widgets-icon-2 {
+  background-color: #ffb53e
+}
+.Dashboard-widgets-icon-3 {
+  background-color: #1ebfae
+}
+.Dashboard-widgets-icon-4 {
+  background-color: #f9243f
+}
+
+.Dashboard-widgets-number {
+  background-color: white;
+}

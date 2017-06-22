@@ -4,6 +4,7 @@ import '../../../../stylesheets/pageViews.css';
 import PropTypes from 'prop-types';
 import { PAGE_VIEW_SHAPE } from '../shapes';
 import dataForChart from './utils';
+import { Panel } from 'react-bootstrap';
 
 export default function PageViews({ pageViews }) {
   const options = {
@@ -12,8 +13,8 @@ export default function PageViews({ pageViews }) {
   };
 
   return (
-    <div className='chart'>
-      <h2>Site traffic overview</h2>
+    <Panel className='chart'>
+      <h2 className='chart-h'>Site traffic overview</h2>
       <div className='chart-content'>
         <Chart
           chartType="AreaChart"
@@ -22,7 +23,7 @@ export default function PageViews({ pageViews }) {
           width="100%"
           height="500px"/>
       </div>
-    </div>
+    </Panel>
   );
 }
 

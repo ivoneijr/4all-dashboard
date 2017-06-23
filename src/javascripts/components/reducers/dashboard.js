@@ -3,10 +3,12 @@ import $         from 'jquery';
 import { API_URL } from '../../../config/constants';
 
 // Constants for the operations that can change the store.
-const SET_ERROR         = "dashboard/SET_ERROR",
-      UPDATE_WIDGETS    = "dashboard/UPDATE_WIDGETS",
-      UPDATE_PAGE_VIEWS = "dashboard/UPDATE_PAGE_VIEWS",
-      UPDATE_MESSAGES   = "dashboard/UPDATE_MESSAGES";
+const SET_ERROR            = "dashboard/SET_ERROR",
+      UPDATE_WIDGETS       = "dashboard/UPDATE_WIDGETS",
+      UPDATE_PAGE_VIEWS    = "dashboard/UPDATE_PAGE_VIEWS",
+      UPDATE_NEW_MESSAGE   = "dashboard/UPDATE_MESSAGES",
+      UPDATE_MESSAGES      = "dashboard/UPDATE_NEW_MESSAGE",
+      ADD_NEW_MESSAGE      = "dashboard/ADD_NEW_MESSAGE";
 
 const DEFAULT_STATE = Immutable.fromJS({
   dashboard: {
@@ -18,7 +20,10 @@ const DEFAULT_STATE = Immutable.fromJS({
       pageViews: null
     },
     pageViews: [],
-    messages: [],
+    messages: {
+      new: '',
+      all:[]
+    },
   }
 });
 
@@ -38,7 +43,20 @@ export default function reducer(state = DEFAULT_STATE, action = {}) {
       return state.setIn(['dashboard', 'pageViews'], Immutable.fromJS(action.data));
 
     case UPDATE_MESSAGES:
-      return state.setIn(['dashboard', 'messages'], Immutable.fromJS(action.data));
+      return state.setIn(['dashboard', 'messages', 'all'], Immutable.fromJS(action.data));
+    
+    case UPDATE_NEW_MESSAGE:
+      return state.setIn(['dashboard', 'messages', 'new'], Immutable.fromJS(action.data));
+    
+    case ADD_NEW_MESSAGE:
+      const newMessage = {
+        userName: "Mary Doe",
+        portrait: "http://dev.4all.com:3050/imgs/profile2.png",
+        message: state.toJS().dashboard.messages.new,
+        displayPortraitLeft: false,
+        time: "secconds mins ago",
+      };
+      return state.updateIn(['dashboard', 'messages', 'all'], messages => messages.push(newMessage));
 
     default:
       return state;
@@ -62,6 +80,14 @@ function updatePageViews(data) {
 
 function updateMessages(data) {
   return { type: UPDATE_MESSAGES, data }
+}
+
+function updateNewMessage(data) {
+  return { type: UPDATE_NEW_MESSAGE, data };
+}
+
+function addNewMessage() {
+  return { type: ADD_NEW_MESSAGE };
 }
 
 /**
@@ -95,4 +121,17 @@ export function fetchMessages() {
         .then(data => dispatch(updateMessages(data)))
         .fail(e => dispatch(setError(e)));
   };
+}
+
+export function fetchNewMessage(input_value) {
+  return function(dispatch) {
+    dispatch(updateNewMessage(input_value));
+  }
+}
+
+export function insertNewMessage() {
+  return function(dispatch) {
+    dispatch(addNewMessage());
+    dispatch(updateNewMessage(''));
+  }
 }

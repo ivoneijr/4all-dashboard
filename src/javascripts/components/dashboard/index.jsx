@@ -26,7 +26,7 @@ class Dashboard extends Component {
   componentWillMount() {
     this.props.dispatch(actions.fetchWidgets());
     this.props.dispatch(actions.fetchPageViews());
-    this.props.dispatch(actions.fetchMessages())
+    this.props.dispatch(actions.fetchMessages());
   }
 
   render() {
@@ -43,7 +43,7 @@ class Dashboard extends Component {
             <h1>Dashboard</h1>
             <Widgets widgets={ widgets }/>
             <PageViews pageViews={ pageViews }/>
-            <Messages messages={ messages }/>
+            <Messages all={ messages.all } inputValue={messages.new} dispatch={this.props.dispatch}/>
           </div>
         </div>
       </div> 

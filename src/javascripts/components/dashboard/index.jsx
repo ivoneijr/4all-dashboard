@@ -43,7 +43,7 @@ class Dashboard extends Component {
             <h1>Dashboard</h1>
             <Widgets widgets={ widgets }/>
             <PageViews pageViews={ pageViews }/>
-            <Messages all={ messages.all } inputValue={messages.new} dispatch={this.props.dispatch}/>
+            <Messages messages={ messages } dispatch={this.props.dispatch}/>
           </div>
         </div>
       </div> 

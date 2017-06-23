@@ -20,8 +20,13 @@ export const MESSAGE_SHAPE = {
   time: PropTypes.string
 };
 
+export const MESSAGES_SHAPE = {
+  all: PropTypes.arrayOf(PropTypes.shape(MESSAGE_SHAPE)),
+  new: PropTypes.string
+}
+
 export const dashboardShape = {
   widgets: PropTypes.shape(WIDGET_SHAPE),
   pageViews: PropTypes.arrayOf(PropTypes.shape(PAGE_VIEW_SHAPE)),
-  messages: PropTypes.arrayOf(PropTypes.shape(MESSAGE_SHAPE))
+  messages: PropTypes.shape(MESSAGES_SHAPE)
 };

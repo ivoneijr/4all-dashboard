@@ -49,14 +49,7 @@ export default function reducer(state = DEFAULT_STATE, action = {}) {
       return state.setIn(['dashboard', 'messages', 'new'], Immutable.fromJS(action.data));
     
     case ADD_NEW_MESSAGE:
-      const newMessage = {
-        userName: "Mary Doe",
-        portrait: "http://dev.4all.com:3050/imgs/profile2.png",
-        message: state.toJS().dashboard.messages.new,
-        displayPortraitLeft: false,
-        time: "secconds mins ago",
-      };
-      return state.updateIn(['dashboard', 'messages', 'all'], messages => messages.push(newMessage));
+      return state.updateIn(['dashboard', 'messages', 'all'], messages => messages.push(action.data));
 
     default:
       return state;
@@ -86,8 +79,8 @@ function updateNewMessage(data) {
   return { type: UPDATE_NEW_MESSAGE, data };
 }
 
-function addNewMessage() {
-  return { type: ADD_NEW_MESSAGE };
+function addNewMessage(data) {
+  return { type: ADD_NEW_MESSAGE, data };
 }
 
 /**
@@ -123,15 +116,25 @@ export function fetchMessages() {
   };
 }
 
-export function fetchNewMessage(input_value) {
+export function fetchNewMessage(inputValue) {
   return function(dispatch) {
-    dispatch(updateNewMessage(input_value));
+    dispatch(updateNewMessage(inputValue));
   }
 }
 
-export function insertNewMessage() {
+export function insertNewMessage(message) {
+  const params = {
+    userName: "Eu",
+    portrait: "http://www.mesasbares.com.br/image/cache/catalog/COR/Laranja-300x300.jpg",
+    message: message,
+    displayPortraitLeft: true,
+    time: "1 min ago",
+  };
+
   return function(dispatch) {
-    dispatch(addNewMessage());
+    $.ajax({ url: `${API_URL}/messages`, contentType: 'application/json', dataType: 'json', type: 'GET', data: params}).fail(e => dispatch(setError(e)));
+
+    dispatch(addNewMessage(params));
     dispatch(updateNewMessage(''));
   }
 }

@@ -24,7 +24,7 @@ export default class Messages extends Component {
     return (
       <Panel className='messages-panel'>
         <div className='chat-icon'> <Icon name='comments-o' size='3x'/> </div>
-        <div className='fixed-panel'>
+        <div className='messages-fixed'>
           { chatElements }
         </div>
         <SendMessage dispatch={ dispatch } inputValue={ messages.new }/>

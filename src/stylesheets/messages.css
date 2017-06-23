@@ -16,7 +16,7 @@
   max-width: 800px;
 }
 
-.fixed-panel {
+.messages-fixed {
   min-height: 10px;
   max-height: 400px;
   overflow-y: scroll;

@@ -8,6 +8,7 @@ import { MESSAGES_SHAPE } from '../shapes';
 import ChatElement from './ChatElement';
 
 import * as actions from '../../reducers/dashboard';
+import '../../../../stylesheets/messages.css';
 
 export default class Messages extends Component {
   static propTypes = {
@@ -21,8 +22,8 @@ export default class Messages extends Component {
     const chatElements = messages.all.map((message, index) =>  <ChatElement key={ index } message={ message } />);
     
     return (
-      <Panel>
-        <div> <Icon name='comments-o' size='3x'/> </div>
+      <Panel className='messages-panel'>
+        <div className='chat-icon'> <Icon name='comments-o' size='3x'/> </div>
         { chatElements }
         <SendMessage dispatch={ dispatch } inputValue={ messages.new }/>
       </Panel>

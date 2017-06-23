@@ -56,7 +56,7 @@ function MediaBody({ heading, body, time }) {
     <Media.Body>
       <Media.Heading>
         <b>{heading} </b> 
-        <span className='time'>{time}</span>
+        <span className='chat-time'>{time}</span>
       </Media.Heading>
       <p>{body}</p>
     </Media.Body>

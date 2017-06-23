@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function ChatElement({ message }) {
   return(
-    <div>
+    <div className='chat-media'>
       <CustomMedia imageSrc={ message.portrait } 
                    heading={ message.userName }
                    body={ message.message }

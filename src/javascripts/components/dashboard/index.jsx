@@ -35,9 +35,9 @@ class Dashboard extends Component {
     return (
       <div>
         <div>
-          {/*<div className="Dashboard-header">
+          <div className="Dashboard-header">
             <img src={ logo } alt='logo'/>
-          </div>*/}
+          </div>
 
           <div className="Dashboard-content">
             <h1>Dashboard</h1>

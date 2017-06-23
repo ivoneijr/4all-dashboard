@@ -1,0 +1,17 @@
+.chat-icon {
+  margin: 23px;
+  margin-top: 10px;
+}    
+
+.chat-media {
+  margin: 35px;
+  margin-bottom: 50px;
+}
+
+.chat-time {
+  font-size: small;
+}
+
+.messages-panel {
+  max-width: 800px;
+}

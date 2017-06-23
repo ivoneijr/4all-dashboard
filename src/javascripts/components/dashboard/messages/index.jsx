@@ -19,12 +19,14 @@ export default class Messages extends Component {
 
   render() {
     const { messages, dispatch } = this.props;
-    const chatElements = messages.all.map((message, index) =>  <ChatElement key={ index } message={ message } />);
+    const chatElements = messages.all.map((message, index) => <ChatElement key={ index } message={ message } />);
     
     return (
       <Panel className='messages-panel'>
         <div className='chat-icon'> <Icon name='comments-o' size='3x'/> </div>
-        { chatElements }
+        <div className='fixed-panel'>
+          { chatElements }
+        </div>
         <SendMessage dispatch={ dispatch } inputValue={ messages.new }/>
       </Panel>
     );

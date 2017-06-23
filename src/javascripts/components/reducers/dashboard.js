@@ -14,10 +14,10 @@ const DEFAULT_STATE = Immutable.fromJS({
   dashboard: {
     error: null,
     widgets: {
-      newOrders: null,
-      comments: null,
-      newUsers: null,
-      pageViews: null
+      newOrders: 0,
+      comments: 0,
+      newUsers: 0,
+      pageViews: 0
     },
     pageViews: [],
     messages: {
